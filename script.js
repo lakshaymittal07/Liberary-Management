@@ -37,9 +37,10 @@ document.getElementById("bookForm").addEventListener("submit", function(e) {
   const title = document.getElementById("bookTitle").value;
   const student = document.getElementById("studentName").value;
   const studentId = document.getElementById("studentId").value;
-  const department = document.getElementById("Department").value;
+  const bookId = document.getElementById("bookId").value;
+  const department = document.getElementById("department").value;
 
-  issuedBooks.push({ title, student, studentId, department });
+  issuedBooks.push({ title, student, studentId, bookId, department });
   renderIssuedBooks();
   this.reset();
 });
@@ -48,7 +49,7 @@ function renderIssuedBooks() {
   issuedBooksList.innerHTML = "";
   issuedBooks.forEach(book => {
     const li = document.createElement("li");
-    li.textContent = `${book.title} issued to ${book.student} (${book.studentId})`;
+    li.textContent = `${book.title} issued to ${book.student} (ID: ${book.studentId}, Book ID: ${book.bookId}, Dept: ${book.department})`;
     issuedBooksList.appendChild(li);
   });
 }
@@ -104,7 +105,7 @@ departmentSelect.addEventListener("change", function() {
       const issueBtn = document.createElement("button");
       issueBtn.textContent = "Issue";
       issueBtn.addEventListener("click", () => {
-        issuedBooks.push({ title: book, student: "Dept-Issue", studentId: dept });
+        issuedBooks.push({ title: book, student: "Dept-Issue", studentId: dept, bookId: "N/A", department: dept });
         renderIssuedBooks();
       });
 
