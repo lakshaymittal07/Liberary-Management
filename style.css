@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eaf2f8;
+  margin: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+h1 {
+  color: #1a5276;
+  margin-bottom: 20px;
+}
+
+section {
+  background: #ffffff;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 700px;
+}
+
+h2 {
+  color: #154360;
+  margin-bottom: 10px;
+}
+
+/* Seats Grid */
+#seatContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  background: #3498db;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seat:hover {
+  background: #2e86c1;
+}
+
+.seat.booked {
+  background: #e74c3c;
+}
+
+/* Book Issue */
+input {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #a9cce3;
+  border-radius: 5px;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2e86c1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f4f9fd;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
